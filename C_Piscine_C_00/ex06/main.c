@@ -1,7 +1,6 @@
-extern void	ft_putchar(char c);
+void	ft_print_comb2(void);
 
-int	main(void)
+int	main()
 {
-	ft_putchar('a');
-	return (0);
+	ft_print_comb2();
 }

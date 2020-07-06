@@ -2,34 +2,30 @@
 
 void ft_print_comb(void)
 {
-	char a;
-	char b;
-	char c;
-	char d;
-	char e;
+	char num[5];
 
-	d = ',';
-	e = ' ';
-	a = '0';
-	while (a <= '7')
+	num[0] = '0';
+	num[3] = ',';
+	num[4] = ' ';
+	while (num[0] <= '7')
 	{
-		b = a + 1;
-		while (b <= '8')
+		num[1] = num[0] + 1;
+		while (num[1] <= '8')
 		{
-			c = b + 1;
-			while (c <= '9')
+			num[2] = num[1] + 1;
+			while (num[2] <= '9')
 			{
 
-				write(1, &a, 3);
+				write(1, &num[0], 3);
 
-				if (!(a == '7' && b == '8' && c == '9'))
+				if (!(num[0] == '7' && num[1] == '8' && num[2] == '9'))
 				{
-					write(1, &d, 2);
+					write(1, &num[3], 2);
 				}
-				c++;
+				num[2]++;
 			}
-			b++;
+			num[1]++;
 		}
-		a++;
+		num[0]++;
 	}
 }
