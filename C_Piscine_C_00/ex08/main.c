@@ -1,8 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seunghyl <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/07 21:45:25 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/07 22:06:15 by seunghyl         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
-void	ft_print_combn(int n)
+void	ft_print_combn(int n);
 
-int		main(void)
+int	main(void)
 {
-	ft_print_combn(&n;
+	for(int i = 1; i < 10; i++)
+	{
+		printf("start %d\n", i);
+		ft_print_combn(i);
+		printf("\n");
+	}
 }
