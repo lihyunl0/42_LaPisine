@@ -6,13 +6,15 @@
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 09:56:10 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/07 11:56:47 by seunghyl         ###   ########.fr       */
+/*   Updated: 2020/07/07 19:19:43 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 void	ft_putnbr(int nb);
 
 int		main(void)
 {
-	ft_putnbr(int nb);
+	ft_putnbr(-19999);
 }
