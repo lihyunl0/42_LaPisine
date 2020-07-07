@@ -5,14 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 11:42:58 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/07 11:50:22 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/07 21:45:25 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 08:48:13 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_print_numbers(void);
+#include <stdio.h>
+
+void	ft_print_combn(int n);
 
 int		main(void)
 {
-	ft_print_numbers();
+	for (int i = 1; i < 10; i++)
+	{
+		printf("start %d\n", i);
+		ft_print_combn(i);
+		printf("\n");
+	}
 }

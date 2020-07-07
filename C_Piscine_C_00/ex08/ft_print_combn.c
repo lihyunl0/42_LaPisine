@@ -6,16 +6,16 @@
 /*   By: seunghyl <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 20:20:06 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/07 22:05:22 by seunghyl         ###   ########.fr       */
+/*   Updated: 2020/07/08 08:43:54 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print(int n, int nums[])
+void	print(int nums[], int n)
 {
-	char c;
-	int i;
+	char	c;
+	int		i;
 
 	i = 0;
 	while (i < n)
@@ -39,7 +39,7 @@ void	comb(int n, int m, int picked[])
 
 	if (n == m)
 	{
-		print(n, picked);
+		print(&n, *picked);
 	}
 	else
 	{
