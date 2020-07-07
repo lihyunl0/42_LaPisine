@@ -1,7 +1,18 @@
-extern void	ft_putchar(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/07 09:56:10 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/07 11:56:47 by seunghyl         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	main(void)
+void	ft_putnbr(int nb);
+
+int		main(void)
 {
-	ft_putchar('a');
-	return (0);
+	ft_putnbr(int nb);
 }

@@ -1,7 +1,18 @@
-extern void	ft_print_alphabet(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/07 10:51:25 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/07 11:51:01 by seunghyl         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	main(void)
+void	ft_print_alphabet(void);
+
+int		main(void)
 {
-	ft_print_alphabet('a');
-	return (0);
+	ft_print_alphabet();
 }

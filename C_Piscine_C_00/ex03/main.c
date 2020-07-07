@@ -1,7 +1,18 @@
-extern void	ft_print_numbers(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seunghyl <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/07 11:42:58 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/07 11:50:22 by seunghyl         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	main(void)
+void	ft_print_numbers(void);
+
+int		main(void)
 {
-	ft_print_numbers('a');
-	return (0);
+	ft_print_numbers();
 }
