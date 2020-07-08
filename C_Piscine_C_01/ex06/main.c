@@ -5,28 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 22:31:36 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 22:52:16 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 23:17:35 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include <string.h>
 
-#include <unistd.h>
-
-void	ft_ft(int *nbr);
+int		ft_strlen(char *str);
 
 int		main(void)
 {
-	int		a;
-	char	c[3];
+	char str[10];
 
-	c[1] = ' ';
-	c[2] = '\n';
-	a = 1;
-	write(1, &c, 3);
-	ft_ft(&a);
-	c[0] = a / 10 + 48;
-	write(1, &c, 1);
-	c[0] = a % 10 + 48;
-	write(1, &c, 3);
-	return (0);
+	str[0] = 'a';
+	str[1] = '9';
+	str[2] = ' ';
+	str[3] = 'c';
+	str[4] = 'd';
+	str[5] = '\0';
+
+	int		len = ft_strlen(str);
+	printf("%d, %lu\n", len, strlen(str));
+	return 0;
 }

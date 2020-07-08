@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 22:31:36 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 22:33:54 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 22:35:40 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_ft(int *nbr);
-
-int		main(void)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int		a;
-	char	c[3];
+	int temp;
 
-	c[1] = ' ';
-	c[2] = '\n';
-	a = 1;
-	write(1, &c, 3);
-	ft_ft(&a);
-	c[0] = a / 10 + 48;
-	write(1, &c, 1);
-	c[0] = a % 10 + 48;
-	write(1, &c, 3);
-	return (0);
+	temp = *a;
+	*a = *a / *b;
+	*b = temp % *b;
 }

@@ -5,28 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 22:31:36 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 23:23:59 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 23:29:37 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_ft(int *nbr);
+void	ft_sort_int_tab(int *tab, int size);
 
 int		main(void)
 {
-	int		a;
-	char	c[3];
+	int		size = 6;
+	int		a[6] = {1, 32, -13, 541, 11, 2};
 
-	c[1] = ' ';
-	c[2] = '\n';
-	a = 1;
-	write(1, &c, 3);
-	ft_ft(&a);
-	c[0] = a / 10 + 48;
-	write(1, &c, 1);
-	c[0] = a % 10 + 48;
-	write(1, &c, 3);
-	return (0);
+	ft_sort_int_tab(a, size);
+
+	for(int i = 0; i < size; i++)
+	{
+		printf("%d ", a[i]);
+	}
+	printf("\n");
 }

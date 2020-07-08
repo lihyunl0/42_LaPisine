@@ -6,7 +6,7 @@
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 19:54:13 by seunghyl         ###   ########.fr       */
+/*   Updated: 2020/07/08 22:31:50 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_ultimate_ft(int *********nbr);
 
-int		main(int *********nbr)
+int		main(void)
 {
 	int		a;
 	char	c[3];
@@ -25,7 +25,6 @@ int		main(int *********nbr)
 	a = 1;
 	c[0] = a + 48;
 	write(1, &c, 3);
-
 	int *p1 = &a;
 	int **p2 = &p1;
 	int ***p3 = &p2;
@@ -40,4 +39,5 @@ int		main(int *********nbr)
 	write(1, &c, 1);
 	c[0] = a % 10 + 48;
 	write(1, &c, 3);
+	return (0);
 }

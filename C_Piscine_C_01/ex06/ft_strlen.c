@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 22:31:36 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 23:13:16 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 23:16:21 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_ft(int *nbr);
-
-int		main(void)
+int		ft_strlen(char *str)
 {
-	int		a;
-	char	c[3];
+	int len;
 
-	c[1] = ' ';
-	c[2] = '\n';
-	a = 1;
-	write(1, &c, 3);
-	ft_ft(&a);
-	c[0] = a / 10 + 48;
-	write(1, &c, 1);
-	c[0] = a % 10 + 48;
-	write(1, &c, 3);
-	return (0);
+	len = 0;
+	while (*(str + len) != '\0')
+	{
+		len++;
+	}
+	return (len);
 }

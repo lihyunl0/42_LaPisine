@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 22:31:36 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 23:31:55 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 23:32:14 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_ft(int *nbr);
-
-int		main(void)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	int		a;
-	char	c[3];
+	int i;
+	int j;
+	int temp;
 
-	c[1] = ' ';
-	c[2] = '\n';
-	a = 1;
-	write(1, &c, 3);
-	ft_ft(&a);
-	c[0] = a / 10 + 48;
-	write(1, &c, 1);
-	c[0] = a % 10 + 48;
-	write(1, &c, 3);
-	return (0);
+	i = 0;
+	while (i < size)
+	{
+		j = i + 1;
+		while (j < size)
+		{
+			j = i + 1;
+			while (j < size)
+			{
+				if (tab[i] > tab[j])
+				{
+					temp = tab[i];
+					tab[i] = tab[j];
+					tab[j] = temp;
+				}
+				j++;
+			}
+			i++;
+		}
+	}
 }

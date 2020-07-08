@@ -5,28 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 22:31:36 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 22:26:27 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 22:29:21 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_ft(int *nbr);
+void	ft_div_mod(int a, int b, int *div, int *mod);
 
 int		main(void)
 {
-	int		a;
-	char	c[3];
+	int		a = 11;
+	int		b = 5;
+	
+	printf("%d, %d\n", a, b);
 
-	c[1] = ' ';
-	c[2] = '\n';
-	a = 1;
-	write(1, &c, 3);
-	ft_ft(&a);
-	c[0] = a / 10 + 48;
-	write(1, &c, 1);
-	c[0] = a % 10 + 48;
-	write(1, &c, 3);
+	int div = -1;
+	int mod = -1;
+
+	ft_div_mod(a, b, &div, &mod);
+
+	printf("%d, %d\n", div, mod);
+
 	return (0);
 }
+

@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/08 18:38:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 22:31:36 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 23:20:42 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/08 23:23:06 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_ft(int *nbr);
-
-int		main(void)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int		a;
-	char	c[3];
+	int		temp;
+	int		index;
+	int		rev_index;
 
-	c[1] = ' ';
-	c[2] = '\n';
-	a = 1;
-	write(1, &c, 3);
-	ft_ft(&a);
-	c[0] = a / 10 + 48;
-	write(1, &c, 1);
-	c[0] = a % 10 + 48;
-	write(1, &c, 3);
-	return (0);
+	index = 0;
+	rev_index = size - 1;
+	while (index < rev_index)
+	{
+		temp = *(tab + index);
+		*(tab + index) = *(tab + rev_index);
+		*(tab + rev_index) = temp;
+		index++;
+		rev_index--;
+	}
 }
