@@ -6,7 +6,7 @@
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 23:31:55 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/08 23:32:14 by seunghyl         ###   ########.fr       */
+/*   Updated: 2020/07/09 11:01:06 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,14 @@ void	ft_sort_int_tab(int *tab, int size)
 		j = i + 1;
 		while (j < size)
 		{
-			j = i + 1;
-			while (j < size)
+			if (tab[i] > tab[j])
 			{
-				if (tab[i] > tab[j])
-				{
-					temp = tab[i];
-					tab[i] = tab[j];
-					tab[j] = temp;
-				}
-				j++;
+				temp = tab[i];
+				tab[i] = tab[j];
+				tab[j] = temp;
 			}
-			i++;
+			j++;
 		}
+		i++;
 	}
 }
