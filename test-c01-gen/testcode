@@ -75,7 +75,7 @@ ex05:
 	ft_putstr("Hello World!\n");
 
 ex05-expected:
-Hello World!
+Hello World!:
 
 ex06:
 
