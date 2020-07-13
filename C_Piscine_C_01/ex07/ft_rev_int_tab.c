@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/13 21:10:40 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/13 21:20:14 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 23:20:42 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/12 14:21:03 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int i;
+	int		temp;
+	int		index;
+	int		rev_index;
 
-	i = 0;
-	while (*(src + i) != '\0')
+	index = 0;
+	rev_index = size - 1;
+	while (index < rev_index)
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		temp = *(tab + index);
+		*(tab + index) = *(tab + rev_index);
+		*(tab + rev_index) = temp;
+		index++;
+		rev_index--;
 	}
-	*(dest + i) = *(src + i);
-	return (dest);
 }
