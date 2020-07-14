@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 09:06:30 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/14 09:07:00 by seunghyl         ###   ########.fr       */
+/*   Created: 2020/07/08 23:20:42 by seunghyl          #+#    #+#             */
+/*   Updated: 2020/07/12 14:21:03 by seunghyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int		i;
-	int		j;
-	int		check;
+	int		temp;
+	int		index;
+	int		rev_index;
 
-	if (to_find[0] == '\0')
-		return (str);
-	i = 0;
-	while (str[i] != '\0')
+	index = 0;
+	rev_index = size - 1;
+	while (index < rev_index)
 	{
-		j = 0;
-		check = 1;
-		while (str[i + j] != '\0' && to_find[j] != '\0')
-		{
-			if (str[i + j] != to_find[j])
-			{
-				check = 0;
-				break ;
-			}
-			j++;
-		}
-		if (check == 1 && to_find[j] == '\0')
-			return (str + i);
-		i++;
+		temp = *(tab + index);
+		*(tab + index) = *(tab + rev_index);
+		*(tab + rev_index) = temp;
+		index++;
+		rev_index--;
 	}
-	return (0);
 }
