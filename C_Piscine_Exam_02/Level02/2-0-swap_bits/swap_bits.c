@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   swap_bits.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
+/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 16:48:35 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/16 09:08:11 by seunghyl         ###   ########.fr       */
+/*   Created: 2017/07/20 21:01:37 by fwuensch          #+#    #+#             */
+/*   Updated: 2017/07/20 21:04:08 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt(int nb)
-{
-	int i;
+#include <unistd.h>
 
-	if (nb == 1)
-		return (1);
-	i = 1;
-	while (i <= nb / i)
-	{
-		if (i * i == nb)
-			return (i);
-		i++;
-	}
+unsigned char	swap_bits(unsigned char octet)
+{
+	return ((octet >> 4) | (octet << 4));
+}
+
+int		main(void)
+{
+	char c;
+
+	c = 't';
+	write(1, &c, 1);
+	c = swap_bits(c);
+	write(1, &c, 1);
 	return (0);
 }

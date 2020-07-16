@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   is_power_of_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seunghyl <lutious2@gmail.com>              +#+  +:+       +#+        */
+/*   By: angavrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/14 16:48:35 by seunghyl          #+#    #+#             */
-/*   Updated: 2020/07/16 09:08:11 by seunghyl         ###   ########.fr       */
+/*   Created: 2016/12/27 06:47:44 by angavrel          #+#    #+#             */
+/*   Updated: 2016/12/27 07:06:53 by angavrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_sqrt(int nb)
+int		is_power_of_2(unsigned int n)
 {
-	int i;
-
-	if (nb == 1)
-		return (1);
-	i = 1;
-	while (i <= nb / i)
-	{
-		if (i * i == nb)
-			return (i);
-		i++;
-	}
-	return (0);
+	if (n == 0)
+		return (0);
+	while (n % 2 == 0) 
+		n /= 2;
+	return ((n == 1) ? 1 : 0);
 }
